@@ -1,0 +1,71 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.getCase = exports.caseStudies = void 0;
+exports.caseStudies = [
+    {
+        id: "bosch", company: "Bosch", country: "آلمان", industry: "تولید قطعات خودرویی و صنعتی",
+        date: "صفحه تاریخ انتشار مشخصی ندارد؛ حق‌چاپ ۲۰۲۶",
+        problem: "ردیابی علت مشکلات کیفیت در خطوط تولید بسیار خودکار با حجم عظیم داده حسگرها؛ بنا بر گزارش Bosch، ردیابی این خطاها پیش‌تر روزها تا ماه‌ها تحلیل دستی نیاز داشت.",
+        solution: "پلتفرم AI Analytics که داده فرایند و کیفیت ایستگاه‌های تولید و آزمون را جمع‌آوری و تحلیل می‌کند و انحراف‌ها را از طریق داشبورد به تیم‌ها هشدار می‌دهد (نمونه: کارخانه Bamberg).",
+        tech: "تحلیل داده‌های حسگر و کیفیت، داده‌کاوی، هوش مصنوعی و داشبورد.",
+        results: ["استفاده از این نرم‌افزار در بیش از ۱۴۰۰ خط تولید در سطح جهان (به گزارش Bosch)", "بنا بر گزارش Bosch، برنامه استقرار در همه ۲۴۰ سایت تولیدی در دست اجراست"],
+        relation: "مرتبط با «داشبورد هوشمند مدیریت تولید»، «پایش هوشمند پارامترهای فرآیند» و «تحلیل داده‌های تولید» در بانک پروژه‌ها.",
+        relatedCategoryIds: ["production"],
+        sourceTitle: "Bosch — Allow me, the AI Analytics Platform", sourceUrl: "https://www.bosch.com/stories/ai-in-manufacturing/", icon: "chart",
+    },
+    {
+        id: "siemens-pg", company: "Siemens و Procter & Gamble", country: "آلمان / ایالات متحده", industry: "کالاهای مصرفی سریع‌گردش",
+        date: "۱۵ سپتامبر ۲۰۲۶ (۲۴ شهریور ۱۴۰۵)",
+        problem: "کنترل کیفیت محصولات با مواد ظریف و بافت‌دار در سرعت بالای خط تولید؛ سامانه‌های بینایی سنتی با تغییر مواد یا طرح بسته‌بندی نیازمند پیکربندی مجدد گسترده‌اند.",
+        solution: "سامانه بازرسی تصویری مبتنی بر هوش مصنوعی (Visual Inspection Cockpit) روی بستر Siemens Industrial Edge که هر محصول را در لحظه بازرسی می‌کند.",
+        tech: "بینایی ماشین مبتنی بر یادگیری عمیق، محاسبات لبه (Edge) و یکپارچگی با PLC.",
+        results: ["کاهش ۱۰ تا ۲۰ درصدی ضایعات بسته به محصول", "راه‌اندازی استقرارهای جدید ۵ تا ۱۰ برابر سریع‌تر از سامانه‌های بینایی سنتی (به گزارش Siemens)"],
+        relation: "مرتبط با گروه «کنترل کیفیت و بینایی ماشین» و پروژه‌های کنترل تصویری بسته‌بندی. این حوزه با مشارکت متخصصان بینایی ماشین صنعتی اجرا می‌شود.",
+        relatedCategoryIds: ["vision", "pharma-food"],
+        sourceTitle: "Siemens Press — Siemens and P&G scale AI-based quality inspection", sourceUrl: "https://press.siemens.com/global/en/pressrelease/siemens-and-procter-gamble-scale-ai-based-quality-inspection-across-global-production", icon: "eye",
+    },
+    {
+        id: "bluescope", company: "BlueScope و Siemens", country: "استرالیا", industry: "فولاد و پوشش فلزی",
+        date: "صفحه تاریخ انتشار مشخصی ندارد؛ همکاری از ۲۰۲۲ آغاز شده است",
+        problem: "توقف‌های برنامه‌ریزی‌نشده در خطوط فرایندی پیوسته که ممکن است هزینه‌های بسیار بالا ایجاد کند؛ پایش پیشین عمدتاً بازرسی چشمی بود.",
+        solution: "نگهداری و تعمیرات پیش‌بینانه با Siemens Senseye؛ پایلوت ۱۲ ماهه در Springhill Works (Port Kembla) و سپس گسترش جهانی.",
+        tech: "نگهداری پیش‌بینانه مبتنی بر هوش مصنوعی و داده حسگر.",
+        results: ["در مرحله پایلوت، ۳۰۰ تجهیز در سه خط پوشش فلزی به سامانه متصل شد", "به گفته BlueScope، بیش از ۱۹۵۰ ساعت توقف و ۵۳ توقف کامل فرایند جلوگیری شده است"],
+        relation: "مرتبط با گروه «نگهداری و تعمیرات هوشمند». بخش‌های حسگر و ابزار دقیق با همکاری متخصصان مرتبط انجام می‌شود.",
+        relatedCategoryIds: ["maintenance"],
+        sourceTitle: "Siemens — BlueScope benefits from AI-supported maintenance", sourceUrl: "https://www.siemens.com/en-us/company/insights/bluescope-predictive-maintenance/", icon: "wrench",
+    },
+    {
+        id: "wef-lighthouse", company: "World Economic Forum — Global Lighthouse Network", country: "بین‌المللی", industry: "صنایع مختلف",
+        date: "۲۲ ژوئن ۲۰۲۶ (۱ تیر ۱۴۰۵)",
+        problem: "گزارش مجمع جهانی اقتصاد از ۱۶ سایت جدید شبکه Lighthouse (جمعاً ۲۳۸ سایت) که فناوری‌های پیشرفته را در مقیاس بالا به کار گرفته‌اند.",
+        solution: "نمونه‌های منتخب زیر مرتبط با صنایع البرز از همان گزارش نقل شده‌اند. همه ارقام متعلق به همان سایت‌هاست.",
+        tech: "هوش مصنوعی در برنامه‌ریزی، کنترل فرایند، نگهداری، کنترل کیفیت و زنجیره تأمین.",
+        results: ["بنا بر گزارش، هوش مصنوعی از پایلوت‌های جدا به قابلیت اصلی عملیات منتقل می‌شود"],
+        sub: [
+            { name: "Taiji Group Chongqing Fuling Pharmaceutical (SINOPHARM)", place: "چونگ‌چینگ، چین", industry: "دارویی (طب سنتی چینی)", results: ["کاهش ۳۳٪ تغییرات کیفیت بین بچ‌ها", "افزایش ۱۳٪ OEE", "کاهش ۱۰٪ هزینه تولید"] },
+            { name: "DCM Shriram", place: "گجرات، هند", industry: "شیمیایی (سودسوز) — انرژی‌بر", results: ["کاهش ۳۲٪ هزینه برق", "کاهش ۱۵٪ هزینه مواد", "کاهش ۱۴٪ انتشار CO₂", "بهبود ۱۱ واحد درصدی EBITDA"] },
+            { name: "Royal Canin", place: "شانگهای، چین", industry: "غذایی (خوراک دام خانگی)", results: ["کاهش ۷۰٪ عیوب خط تولید", "حفظ سطح خدمات بالای ۹۸٪"] },
+            { name: "Unilever (Haridwar)", place: "هند", industry: "کالاهای مصرفی / زنجیره تأمین", results: ["کاهش ۷۲٪ زمان پاسخ", "افزایش سطح خدمات به ۹۹٪"] },
+            { name: "Rockwell Automation", place: "سنگاپور", industry: "تجهیزات الکتریکی", results: ["کاهش ۳۵٪ عیوب", "افزایش ۴۳٪ واحد بر نفر-ساعت"] },
+            { name: "Merck (Fenil-sur-Corsier)", place: "سوئیس", industry: "دارویی (بیولوژیک)", results: ["کاهش ۵۰٪ زمان رسیدن به بیمار", "افزایش ۶۷٪ بهره‌وری نیروی آزمایشگاه"] },
+            { name: "Schneider Electric (El Paso)", place: "ایالات متحده", industry: "تجهیزات الکتریکی", results: ["افزایش تحویل به‌موقع از ۶۱٪ به ۹۷٪"] },
+        ],
+        relation: "این نمونه‌ها نشان می‌دهند ابزارهایی مانند پیش‌بینی، کنترل کیفیت و بهینه‌سازی انرژی در صنایع دارویی، غذایی و شیمیایی ـ که در البرز اهمیت دارند ـ در سطح جهانی گزارش شده است.",
+        relatedCategoryIds: ["pharma-food", "energy", "supply-chain", "production"],
+        sourceTitle: "World Economic Forum — New Global Lighthouse Sites", sourceUrl: "https://www.weforum.org/media/new-global-lighthouse-sites-demonstrate-how-ai-is-rewiring-manufacturing-and-supply-chains", icon: "globe",
+    },
+    {
+        id: "nist", company: "NIST (مؤسسه ملی استاندارد و فناوری آمریکا)", country: "ایالات متحده", industry: "تولید هوشمند — سند راهبردی",
+        date: "۳ ژوئیه ۲۰۲۶ (۱۲ تیر ۱۴۰۵)",
+        problem: "چالش‌های به‌کارگیری AI/ML در صنعت: پیچیدگی داده‌های بزرگ صنعتی، مدیریت داده، یکپارچگی با سامانه‌های حسگر و کنترل، و نیاز به عملکرد قابل‌اعتماد و توضیح‌پذیر.",
+        solution: "نقشه راهی که مبانی، کاربردها و جهت‌های نوظهور AI و ML در تولید هوشمند ـ از جمله دوقلوی دیجیتال، هوش مصنوعی مولد و مدل‌های زبانی بزرگ ـ را بررسی می‌کند.",
+        tech: "تحلیل داده صنعتی، دوقلوی دیجیتال، هوش مصنوعی مولد، مدل‌های زبانی بزرگ، هوش مصنوعی توضیح‌پذیر.",
+        results: ["نویسندگان: Gregory Vogl، Aaron Cornelius، Xiaodong Jia (ناشر: IOP Publishing)", "این سند مطالعه موردی شرکتی نیست و نتیجه عددی ندارد؛ مرجع راهبردی طرح است"],
+        relation: "پشتوانه تأکید طرح بر کیفیت داده، یکپارچه‌سازی و ارزیابی‌پذیری راهکارها.",
+        relatedCategoryIds: ["advanced", "genai"],
+        sourceTitle: "NIST — 2026 Roadmap on AI and ML for Smart Manufacturing", sourceUrl: "https://www.nist.gov/publications/2026-roadmap-artificial-intelligence-and-machine-learning-smart-manufacturing", icon: "book",
+    },
+];
+const getCase = (id) => exports.caseStudies.find((c) => c.id === id);
+exports.getCase = getCase;
